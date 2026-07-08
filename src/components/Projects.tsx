@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import cloudedeployment from "../assets/clouddeployment.jpg";
 import erp from "../assets/erp.jpg";
 import portfolioImg from "../assets/portfolio.jpg";

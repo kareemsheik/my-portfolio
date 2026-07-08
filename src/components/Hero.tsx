@@ -71,7 +71,7 @@ function Hero() {
                         </a>
 
                         <a
-                            href="tel:+918347797585"
+                            href="tel:+918247797585"
                             className="px-8 py-4 rounded-xl border border-blue-500 hover:bg-blue-600 transition"
                         >
                             Contact Me
