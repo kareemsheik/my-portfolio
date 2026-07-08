@@ -17,7 +17,7 @@ const projects = [
       "Docker",
       "Oracle"
     ],
-    github: "#",
+    github: "https://github.com/kareemsheik",
     demo: "#",
   },
 
@@ -32,7 +32,7 @@ const projects = [
       "Tailwind",
       "Framer Motion",
     ],
-    github: "#",
+    github: "https://github.com/kareemsheik/my-portfolio",
     demo: "#",
   },
 
@@ -47,7 +47,7 @@ const projects = [
       "Azure",
       "Linux",
     ],
-    github: "#",
+    github: "https://github.com/kareemsheik/my-portfolio",
     demo: "#",
   },
 ];
@@ -131,7 +131,7 @@ function Projects() {
                 <div className="flex gap-4 mt-8">
 
                   <a
-                   href='https://github.com/kareemsheik'
+                   href={project.github}
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center gap-2 px-5 py-3 bg-slate-800 rounded-xl hover:bg-slate-700 transition"
@@ -140,15 +140,7 @@ function Projects() {
                     GitHub
                   </a>
 
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-2 px-5 py-3 bg-blue-600 rounded-xl hover:bg-blue-500 transition"
-                  >
-                    <FaExternalLinkAlt />
-                    Live
-                  </a>
+                 
 
                 </div>
 
