@@ -108,8 +108,7 @@ function Hero() {
                     initial={{ opacity: 0, x: 80 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="relative flex justify-center"
-                >
+                    className="relative flex justify-center">
 
                     <div className="absolute w-96 h-96 rounded-full bg-blue-500 blur-3xl opacity-20"></div>
 
@@ -163,7 +162,7 @@ function Hero() {
 
             {/* Tech Stack */}
 
-            <div className="absolute bottom-8 left-0 right-0">
+            <div className="absolute bottom-2 left-0 right-0">
 
                 <div className="flex justify-center gap-8 text-4xl flex-wrap">
 
