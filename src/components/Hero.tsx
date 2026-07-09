@@ -162,7 +162,7 @@ function Hero() {
 
             {/* Tech Stack */}
 
-            <div className="absolute bottom-2 left-0 right-0">
+            <div className="relativelg:absolute lg:bottom-2 lg:left-0 lg:right-0 mt-12 lg:mt-0">
 
                 <div className="flex justify-center gap-8 text-4xl flex-wrap">
 
