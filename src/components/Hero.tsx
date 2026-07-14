@@ -162,7 +162,6 @@ function Hero() {
 
             {/* Tech Stack */}
 
-            <div className="relativelg:absolute lg:bottom-2 lg:left-0 lg:right-0 mt-12 lg:mt-0">
 
                 <div className="flex justify-center gap-8 text-4xl flex-wrap">
 
@@ -186,7 +185,7 @@ function Hero() {
 
                 </div>
 
-            </div>
+            
 
         </section>
     );
