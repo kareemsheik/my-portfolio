@@ -1,16 +1,15 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import {
-import axios from './../../node_modules/axios/lib/axios';
     FaEnvelope,
     FaPhoneAlt,
     FaMapMarkerAlt,
     FaGithub,
     FaLinkedin,
 } from "react-icons/fa";
-
+import axios from "axios";
 function Contact() {
-    const [formdata,setformdata]=useState({
+  const [formdata,setformdata]=useState({
         name:"",
         mail:"",
         subject:"",
@@ -243,8 +242,7 @@ function Contact() {
                             className="w-full p-4 rounded-xl bg-slate-800 outline-none"
                         />
 
-                        <button 
-                         type="submit"
+                        <button
                             className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-500 transition font-semibold"
                         >
 
