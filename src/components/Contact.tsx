@@ -217,7 +217,7 @@ function Contact() {
 
                         <input
                             type="email"
-                            name="email"
+                            name="mail"
                             value={formdata.mail}
                             onChange={handleChange}
                             placeholder="Email Address"
