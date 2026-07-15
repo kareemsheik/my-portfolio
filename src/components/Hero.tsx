@@ -163,7 +163,7 @@ function Hero() {
             {/* Tech Stack */}
 
 
-                <div className="flex justify-center gap-8 text-4xl flex-wrap">
+                <div className="flex justify-center gap-8 text-4xl flex-wrap mt-5">
 
                     <FaJava />
 
