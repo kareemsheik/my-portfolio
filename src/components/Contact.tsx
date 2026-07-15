@@ -11,7 +11,7 @@ import axios from "axios";
 function Contact() {
   const [formdata,setformdata]=useState({
         name:"",
-        mail:"",
+        mailfrom:"",
         subject:"",
         message:""
     })
@@ -27,7 +27,7 @@ function Contact() {
             alert("Message sent successfully!");
            setformdata({
             name:"",
-            mail:"",
+            mailfrom:"",
             subject:"",
             message:""})
         }catch(err){
@@ -196,7 +196,7 @@ function Contact() {
                     {/* Right */}
 
                     <motion.form
-
+                         onSubmit={handleSubmit}
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: .7 }}
@@ -205,7 +205,7 @@ function Contact() {
                         className="bg-slate-900 p-8 rounded-3xl shadow-xl space-y-6"
                     >
 
-                       <form onSubmit={handleSubmit} className="space-y-6">
+                      
                          <input
                             type="text"
                             name="name"
@@ -217,8 +217,8 @@ function Contact() {
 
                         <input
                             type="email"
-                            name="mail"
-                            value={formdata.mail}
+                            name="mailfrom"
+                            value={formdata.mailfrom}
                             onChange={handleChange}
                             placeholder="Email Address"
                             className="w-full p-4 rounded-xl bg-slate-800 outline-none"
@@ -249,7 +249,7 @@ function Contact() {
                             Send Message
 
                         </button>
-                       </form>
+                       
 
                     </motion.form>
 
