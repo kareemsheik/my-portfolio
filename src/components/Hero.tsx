@@ -17,7 +17,7 @@ function Hero() {
     return (
         <section
             id="home"
-            className="justify-between min-h-screen flex flex-col items-center bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 px-8"
+            className="justify-between p-5 min-h-screen flex flex-col items-center bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 px-8"
         >
             <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
 

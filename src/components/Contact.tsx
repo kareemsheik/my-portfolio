@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import {
+import axios from './../../node_modules/axios/lib/axios';
     FaEnvelope,
     FaPhoneAlt,
     FaMapMarkerAlt,
@@ -8,6 +10,32 @@ import {
 } from "react-icons/fa";
 
 function Contact() {
+    const [formdata,setformdata]=useState({
+        name:"",
+        mail:"",
+        subject:"",
+        message:""
+    })
+
+    const handleChange=(e:any)=>{
+        setformdata({...formdata,[e.target.name]:e.target.value})
+    }
+    const handleSubmit=(e:any)=>{
+        e.preventDefault()
+        try{
+            const res=axios.post("http://3.111.47.181/send-email",formdata);
+            console.log(res);
+            alert("Message sent successfully!");
+           setformdata({
+            name:"",
+            mail:"",
+            subject:"",
+            message:""})
+        }catch(err){
+            console.log(err);
+        }
+       
+    }
     return (
         <section
             id="contact"
@@ -178,37 +206,52 @@ function Contact() {
                         className="bg-slate-900 p-8 rounded-3xl shadow-xl space-y-6"
                     >
 
-                        <input
+                       <form onSubmit={handleSubmit} className="space-y-6">
+                         <input
                             type="text"
+                            name="name"
+                            value={formdata.name}
+                            onChange={handleChange}
                             placeholder="Your Name"
                             className="w-full p-4 rounded-xl bg-slate-800 outline-none"
                         />
 
                         <input
                             type="email"
+                            name="email"
+                            value={formdata.mail}
+                            onChange={handleChange}
                             placeholder="Email Address"
                             className="w-full p-4 rounded-xl bg-slate-800 outline-none"
                         />
 
                         <input
                             type="text"
+                            name="subject"
+                            value={formdata.subject}
+                            onChange={handleChange}
                             placeholder="Subject"
                             className="w-full p-4 rounded-xl bg-slate-800 outline-none"
                         />
 
                         <textarea
+                            name="message"
                             rows={6}
+                            value={formdata.message}
+                            onChange={handleChange}
                             placeholder="Write your message..."
                             className="w-full p-4 rounded-xl bg-slate-800 outline-none"
                         />
 
-                        <button
+                        <button 
+                         type="submit"
                             className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-500 transition font-semibold"
                         >
 
                             Send Message
 
                         </button>
+                       </form>
 
                     </motion.form>
 
