@@ -22,7 +22,7 @@ function Contact() {
     const handleSubmit=(e:any)=>{
         e.preventDefault()
         try{
-            const res=axios.post("http://3.111.47.181/send-email",formdata);
+            const res=axios.post("http://3.111.47.181:8000/send-email",formdata);
             console.log(res);
             alert("Message sent successfully!");
            setformdata({
